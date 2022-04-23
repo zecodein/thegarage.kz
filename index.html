@@ -88,9 +88,10 @@
           </div> -->
           <div class="row center">
             <a
-              href="https://thegarage.kz"
+              href="#modal-order"
               id="download-button"
-              class="btn-large waves-effect waves-teal yellow lighten-1 grey-text text-darken-4"
+             
+              class="btn-large waves-effect waves-teal yellow lighten-1 grey-text text-darken-4 modal-trigger"
               >Записаться</a
             >
           </div>
@@ -104,6 +105,44 @@
         />
       </div>
     </div>
+
+      <!-- Modal order -->
+  <div id="modal-order" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s10"><h4>Заполните</h4></div>
+        <div class="col s2 modal-close" style="text-align: end;"><i class="material-icons">close</i></div>
+
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">         
+          <label for="icon_prefix">Имя Фамилия</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate">          
+          <label for="icon_telephone">Телефон</label>
+        </div>
+
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">today</i>
+          <input id="icon_prefix" type="text" class="datepicker">         
+          <label for="icon_prefix">Дата</label>
+        </div>
+       
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">watch_later</i>
+          <input id="icon_prefix" type="text" class="timepicker">         
+          <label for="icon_prefix">Время</label>
+        </div>
+
+      </div>
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Записаться</a>
+    </div>
+  </div>
 
     <!-- promo -->
     <div class="container">
@@ -221,6 +260,7 @@
     <!-- services -->
     <div class="container">
       <div class="section">
+        <!-- header  -->
         <div class="row">
           <div class="col s6 white-text">
             <h5>Услуги</h5>
@@ -236,7 +276,7 @@
 
         <!--   Icon Section   -->
         <div class="row">
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <div class="icon-block">
               <h2 class="center grey-text text-lighten-2">
                 <i class="material-icons">local_car_wash</i>
@@ -252,7 +292,7 @@
             </div>
           </div>
 
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <div class="icon-block">
               <h2 class="center grey-text text-lighten-2">
                 <i class="material-icons">build</i>
@@ -265,7 +305,7 @@
             </div>
           </div>
 
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <div class="icon-block">
               <h2 class="center grey-text text-lighten-2">
                 <i class="material-icons">radio_button_checked</i>
@@ -278,7 +318,7 @@
             </div>
           </div>
 
-          <div class="col s12 m3">
+          <div class="col s12 m6 l3">
             <div class="icon-block">
               <h2 class="center grey-text text-lighten-2">
                 <i class="material-icons">opacity</i>
@@ -320,16 +360,7 @@
             <h3><i class="mdi-content-send brown-text"></i></h3>
             <h4 class="yellow-text text-accent-3">Связаться с нами</h4>
             <p class="left-align light grey-text text-lighten-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              scelerisque id nunc nec volutpat. Etiam pellentesque tristique
-              arcu, non consequat magna fermentum ac. Cras ut ultricies eros.
-              Maecenas eros justo, ullamcorper a sapien id, viverra ultrices
-              eros. Morbi sem neque, posuere et pretium eget, bibendum
-              sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis
-              nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa
-              odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget
-              dignissim mauris, non tristique erat. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae;
+              
             </p>
           </div>
         </div>
@@ -425,6 +456,22 @@
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems);
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems);
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.timepicker');
+    var instances = M.Timepicker.init(elems);
+  });
+
     </script>
   </body>
 </html>
