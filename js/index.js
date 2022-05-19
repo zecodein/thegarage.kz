@@ -90,10 +90,10 @@ $("#form").submit(function (event) {
     // Get data
     var data = {
       // "entry.2141224228": "Перезвонить",
-      "entry.584655981": $("#nameSurname").val(),
-      "entry.1023294698": $("#tel").val(),
-      "entry.696841968": $("#date").val(),
-      "entry.1482041227": $("#time").val(),
+      "entry.684392897": $("#nameSurname").val(),
+      "entry.650130227": $("#tel").val(),
+      "entry.1073614050": $("#date").val(),
+      "entry.228246401": $("#time").val(),
     };
 
     // Validate form
@@ -119,7 +119,7 @@ $("#form").submit(function (event) {
       document.getElementById("submit").disabled = true;
       // Send request
       $.ajax({
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSdyDfUuB1Cf5VqFU0ecsYsZIIFT3SzDbLvyrxnSEy-PuijBPg/formResponse",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSewIkTC1lnkohVOvrQsz2R1eDFDzkZUCJ41HXeBjJ70ohz1_A/formResponse",
         type: "POST",
         crossDomain: true,
         dataType: "xml",
